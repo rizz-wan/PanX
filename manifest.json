@@ -1,0 +1,38 @@
+{
+  "name": "PanX",
+  "description": "Extension to open a panel on any page in chrome",
+  "version": "0.1",
+  "manifest_version": 3,
+  "action": {},
+  "icons": {
+    "16": "/images/panX-16.png",
+    "32": "/images/panX-32.png",
+    "48": "/images/panX-48.png",
+    "128": "/images/panX-128.png"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://*/*"],
+      "js": ["panX.js"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["panelContent.html"],
+      "matches": ["https://*/*"]
+    }
+  ],
+  "permissions": ["activeTab", "scripting"],
+  "commands": {
+    "_execute_action": {
+      "suggested_key": {
+        "default": "Alt+Shift+E",
+        "mac": "Alt+Shift+E"
+      },
+      "description": "Opens panel"
+    }
+  }
+}

@@ -1,0 +1,45 @@
+:root {
+  --color: #000;
+  --backgroundColor: rgba(255, 255, 255, 0.8);
+}
+body {
+  margin: 8px;
+  background-color: var(--backgroundColor);
+  color: var(--color);
+}
+h3 {
+  margin: 0;
+}
+.button-container {
+  text-align: right;
+}
+#minButton,
+#restoreButton,
+#closeButton {
+  border-radius: 100%;
+  height: 18px;
+  width: 18px;
+  background-image: url("images/buttons.png");
+  background-size: 60px;
+  background-position-y: -0.4px;
+  cursor: default;
+}
+#restoreButton {
+  background-position-x: -43.5px;
+}
+#minButton {
+  background-position-x: -22px;
+}
+.button-container:hover #restoreButton,
+.button-container:hover #minButton,
+.button-container:hover #closeButton {
+  background-position-y: -20.6px;
+}
+hr {
+  margin: 0.5em 0;
+}
+#panX-header {
+  margin: -8px -8px auto;
+  padding: 8px 8px 0;
+}
+/* Engine ends*/
