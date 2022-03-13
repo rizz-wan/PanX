@@ -1,4 +1,6 @@
 # PanX
+A chrome extension boilerplate to inject an iframe panel to a webpage
+
 ![panX](images/panX.png)
 
 ## Setup
