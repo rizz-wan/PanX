@@ -25,7 +25,7 @@ A chrome extension boilerplate to inject an iframe panel to a webpage
 
     - Minimize button( <img src="images/y.png" alt="drawing" width="10"/> ): To hide and show the panel.
 
-    - Remove button( <img src="images/r.png" alt="drawing" width="10"/> ): To temporarily remove the panel from the site, and will require a reload or it to be re-embedded to the site.
+    - Remove button( <img src="images/r.png" alt="drawing" width="10"/> ): To temporarily remove the panel from the site, and will require a reload for it to be re-embedded to the site.
 
 ## Feedback
 
