@@ -34,7 +34,6 @@ function restorePanel() {
 function removePanel() {
   parent.postMessage("removePanel", "*");
 }
-
 window.addEventListener("scroll", () => {
   const [r, g, b] = [255, 255, 255];
   let [a, blur] = [0, 0];

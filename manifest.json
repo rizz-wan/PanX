@@ -1,7 +1,7 @@
 {
   "name": "PanX",
   "description": "Extension to open a panel on any page in chrome",
-  "version": "0.1",
+  "version": "1.0",
   "manifest_version": 3,
   "action": {},
   "icons": {

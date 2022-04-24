@@ -1,7 +1,12 @@
-let panelWidth = "440px"; // update to change panel width
+let numPanelWidth = 440; // update to change panel width
+let panelOffset = 16; // update to change panel margin from body, 2X body.margin in css
+let panelWidth = `${numPanelWidth}px`;
 let panelVisibility = "hidden"; // update to change panel visibility on load
 let tmpPanelWidth = panelWidth;
+const fullPanel = `calc(100% - ${panelOffset}px)`;
 let hasPanel = true;
+const windowWidth = window.innerWidth;
+let shouldRestore = windowWidth > numPanelWidth + panelOffset ? true : false;
 chrome.runtime.onMessage.addListener((msg, sender) => {
   if (msg == "togglePanel") {
     hasPanel && toggle();
@@ -12,17 +17,18 @@ addEventListener("message", function (ev) {
     toggle();
   }
   if (ev.data == "restorePanel") {
-    restore();
+    shouldRestore && restore();
   }
   if (ev.data == "removePanel") {
     remove();
   }
 });
-var iframe = document.createElement("iframe");
+let iframe = document.createElement("iframe");
 iframe.style.background = "rgba(255,255,255,0)";
 iframe.style.backdropFilter = "saturate(200%) blur(28px)";
-iframe.style.height = "calc(100% - 16px)";
-iframe.style.width = panelWidth;
+iframe.style.height = fullPanel;
+iframe.style.width =
+  windowWidth > numPanelWidth + panelOffset ? panelWidth : fullPanel;
 iframe.style.opacity = 0;
 iframe.style.position = "fixed";
 iframe.style.visibility = panelVisibility;
@@ -56,12 +62,11 @@ function restore() {
   tmpPanelWidth = iframe.style.width;
   if (panelVisibility == "visible") {
     if (tmpPanelWidth == panelWidth) {
-      tmpPanelWidth = "calc(100% - 16px)";
+      tmpPanelWidth = fullPanel;
     } else {
       tmpPanelWidth = panelWidth;
     }
   }
-
   iframe.style.width = tmpPanelWidth;
 }
 function remove() {
@@ -69,4 +74,14 @@ function remove() {
   document.body.style.overflow = "auto";
   hasPanel = false;
 }
+window.addEventListener("resize", function (event) {
+  if (event.currentTarget.innerWidth > numPanelWidth + panelOffset) {
+    tmpPanelWidth = panelWidth;
+    shouldRestore = true;
+  } else {
+    tmpPanelWidth = fullPanel;
+    shouldRestore = false;
+  }
+  iframe.style.width = tmpPanelWidth;
+});
 // Engine ends
