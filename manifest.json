@@ -25,7 +25,7 @@
       "matches": ["https://*/*"]
     }
   ],
-  "permissions": ["activeTab", "scripting"],
+  "permissions": ["contextMenus", "activeTab", "scripting"],
   "commands": {
     "_execute_action": {
       "suggested_key": {

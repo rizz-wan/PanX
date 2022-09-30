@@ -1,3 +1,11 @@
+/*!
+ * PanX, A chrome extension boilerplate to inject an iframe panel to a webpage.
+ *
+ * @author Rizwan Khan <https://www.irizwan.com>
+ *
+ * @license  MIT
+ */
+
 let panXHeader = document.getElementById("panX-header");
 let minButton = document.getElementById("minButton");
 let restoreButton = document.getElementById("restoreButton");

@@ -1,3 +1,11 @@
+/*!
+ * PanX, A chrome extension boilerplate to inject an iframe panel to a webpage.
+ *
+ * @author Rizwan Khan <https://www.irizwan.com>
+ *
+ * @license  MIT
+ */
+
 let numPanelWidth = 440; // update to change panel width
 let panelOffset = 16; // update to change panel margin from body, 2X body.margin in css
 let panelWidth = `${numPanelWidth}px`;
