@@ -19,7 +19,7 @@ h3 {
   border-radius: 100%;
   height: 18px;
   width: 18px;
-  background-image: url("images/buttons.png");
+  background-image: url("../images/buttons.png");
   background-size: 60px;
   background-position-y: -0.4px;
   cursor: default;

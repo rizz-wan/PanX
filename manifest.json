@@ -16,12 +16,12 @@
   "content_scripts": [
     {
       "matches": ["https://*/*"],
-      "js": ["panX.js"]
+      "js": ["js/panX.js"]
     }
   ],
   "web_accessible_resources": [
     {
-      "resources": ["panelContent.html"],
+      "resources": ["templates/panelContent.html"],
       "matches": ["https://*/*"]
     }
   ],

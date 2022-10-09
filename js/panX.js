@@ -51,7 +51,7 @@ iframe.setAttribute("id", "panXPanel");
 iframe.setAttribute("allow", "clipboard-write"); // enable async clipboard API, specifically, to write on clipboard, for copy to clipboard features
 iframe.style.boxShadow =
   "rgba(0, 0, 0, 0.22) 0px 25px 57px 0px, rgba(0, 0, 0, 0.18) 0px 4px 14px 0px";
-iframe.src = chrome.runtime.getURL("panelContent.html");
+iframe.src = chrome.runtime.getURL("../templates/panelContent.html");
 document.body.appendChild(iframe);
 function toggle() {
   if (panelVisibility == "hidden") {
