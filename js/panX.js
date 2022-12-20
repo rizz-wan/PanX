@@ -32,7 +32,7 @@ addEventListener("message", function (ev) {
   }
 });
 let iframe = document.createElement("iframe");
-iframe.style.background = "rgba(255,255,255,0)";
+iframe.style.background = "rgba(255,255,255,0.65)";
 iframe.style.backdropFilter = "saturate(200%) blur(28px)";
 iframe.style.height = fullPanel;
 iframe.style.width =
