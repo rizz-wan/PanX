@@ -44,7 +44,7 @@ iframe.style.top = "8px";
 iframe.style.right = `-${panelWidth}`;
 iframe.style.zIndex = "9000000000000000000";
 iframe.style.border = "none";
-iframe.style.borderRadius = "8px";
+iframe.style.borderRadius = "12px";
 iframe.style.transition =
   "visibility 0.15s, right 0.15s, width 0.15s, opacity 0.15s ease-in-out";
 iframe.setAttribute("id", "panXPanel");
